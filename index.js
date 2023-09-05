@@ -25,18 +25,16 @@ inquirer
   .then(answers => {
     console.log(answers);
     const readmecontent = generateMarkdown(answers);
-    fs.writeFile("./assets/README.md", readmecontent, (err) => {
-      err ? console.log(err) : console.log("README file created successfully");
-    })
-      
+    writeToFile("./assets/README.md", readmecontent);
+  })
   .catch(err => console.log("An Error occured:", err));
-    
+
+// function to write README file
+const writeToFile = (fileName, data) => {
+  fs.writeFile(fileName, data, (err) => {
+    err ? console.log(err) : console.log("README file created successfully");
   });
-
-
-// TODO: Create a function to write README file
-
-// function writeToFile(fileName, data) {}
+};
 
 // TODO: Create a function to initialize app
 function init() {}
