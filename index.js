@@ -37,11 +37,11 @@ const questions = [
     validate: (value) => value ? true : colors.red.bold("Please enter a valid installation instructions for your project"),
   },
   {
-    type: "input",
+    type: "editor",
     name: "usage",
     message: colors.green.bold("Please enter the usage information for your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid usage information for your project"),
-    default: colors.yellow.bold("The User can use this application to..."),
+    default: colors.yellow.bold("Provide instructions and examples for use. Include screenshots as needed."),
   },
   {
     type: "input",
@@ -62,6 +62,12 @@ const questions = [
     message: colors.green.bold("Please select the features of your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid features for your project"),
     default: colors.yellow.bold("List your project features here"),
+  },
+  {
+    type: "input",
+    name: "test",
+    message: colors.green.bold("Please enter the test instructions for your project:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid test instructions for your project"),
   }
 
 ];

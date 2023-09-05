@@ -32,6 +32,9 @@ ${data.credits}
 ## Features
 ${data.features}
 
+## Test
+${data.test}
+
 `;
 }
 
