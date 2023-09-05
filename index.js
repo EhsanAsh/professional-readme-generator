@@ -48,6 +48,20 @@ const questions = [
     name: "contributing",
     message: colors.green.bold("Please enter the contribution guidelines for your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid contribution guidelines for your project"),
+  },
+  {
+    type: "input",
+    name: "credits",
+    message: colors.green.bold("Please enter the credits for your project:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid credits for your project"),
+    default: colors.yellow.bold("List your collaboraters, used technologies, and third-party assets here"),
+  },
+  {
+    type: "input",
+    name: "features",
+    message: colors.green.bold("Please select the features of your project:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid features for your project"),
+    default: colors.yellow.bold("List your project features here"),
   }
 
 ];

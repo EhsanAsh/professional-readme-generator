@@ -26,6 +26,12 @@ ${data.installation}
 ## Contributing
 ${data.contributing}
 
+## Credits
+${data.credits}
+
+## Features
+${data.features}
+
 `;
 }
 
