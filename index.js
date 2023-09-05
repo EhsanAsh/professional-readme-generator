@@ -29,6 +29,12 @@ const questions = [
     message: colors.green.bold("Please enter a description for your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid description for your project"),
     default: colors.yellow.bold("Add your desired description here"),
+  },
+  {
+    type: "editor",
+    name: "installation",
+    message: colors.green.bold("Please enter the installation instructions for your project:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid installation instructions for your project"),
   }
 
 ];
