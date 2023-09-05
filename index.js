@@ -35,6 +35,13 @@ const questions = [
     name: "installation",
     message: colors.green.bold("Please enter the installation instructions for your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid installation instructions for your project"),
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: colors.green.bold("Please enter the usage information for your project:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid usage information for your project"),
+    default: colors.yellow.bold("The User can use this application to..."),
   }
 
 ];

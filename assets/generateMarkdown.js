@@ -20,6 +20,9 @@ function generateMarkdown(data) {
 ## installation
 ${data.installation}
 
+## Usage
+> ${data.usage}
+
 `;
 }
 
