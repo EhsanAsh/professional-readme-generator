@@ -3,8 +3,10 @@ const fs = require("fs");
 const generateMarkdown = require("./assets/generateMarkdown.js");
 const colors = require("colors");
 
-console.log(`Hi, this application is created to generate a professional README for your projects.
-You will be asked to answer some questions and enter som information to create your README file as you are expecting`.rainbow);
+console.log(colors.rainbow(
+  `Hi, this application is created to generate a professional README for your projects.
+  You will be asked to answer some questions and enter som information to create your README file as you are expecting`
+));
 
 // array of questions for user
 const questions = [
@@ -23,7 +25,7 @@ inquirer
   .prompt(questions)
 
   .then(answers => {
-    console.log(answers);
+    console.log(colors.cyan("Your answers: ", answers));
     const readmecontent = generateMarkdown(answers);
     writeToFile("./assets/README.md", readmecontent);
   })
