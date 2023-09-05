@@ -23,6 +23,9 @@ ${data.installation}
 ## Usage
 > ${data.usage}
 
+## Contributing
+${data.contributing}
+
 `;
 }
 

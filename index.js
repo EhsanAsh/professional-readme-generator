@@ -42,6 +42,12 @@ const questions = [
     message: colors.green.bold("Please enter the usage information for your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid usage information for your project"),
     default: colors.yellow.bold("The User can use this application to..."),
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: colors.green.bold("Please enter the contribution guidelines for your project:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid contribution guidelines for your project"),
   }
 
 ];
