@@ -6,13 +6,6 @@ const colors = require("colors");
 const folderPath = process.argv[2] || process.cwd() + "/README.md";
 // Creating a new instance of the inquirer.ui.BottomBar class
 const ui = new inquirer.ui.BottomBar();
-ui.log.write(colors.brightGreen.bold("Generating README file..."));
-
-console.log(colors.rainbow(
-  `Hi, this application is created to generate a professional README for your projects.
-You will be asked to answer some questions and enter information to create your README file as expected.
-`
-));
 
 // array of questions for user
 const questions = [
@@ -90,8 +83,26 @@ const questions = [
   }
 
 ];
+  
+// function to write README file
+const writeToFile = (fileName, data) => {
+  fs.writeFile(fileName, data, (err) => {
+    // using ui.log.write() to write to the bottom bar
+    ui.log.write(colors.brightGreen.bold("Generating README file..."));
+    err ? console.log(err) : console.log(colors.brightBlue.bold("README file created successfully"));
+  });
+};
+  
+// Creating a function to initialize app
+const init = () => {
 
-inquirer
+  console.log(colors.rainbow(
+    `Hi, this application is created to generate a professional README for your projects.
+You will be asked to answer some questions and enter information to create your README file as expected.
+  `
+  ));
+
+  inquirer
   
   .prompt(questions)
 
@@ -101,15 +112,7 @@ inquirer
   })
   .catch(err => console.log(colors.red.bold("An Error occured:"), err));
   
-  // function to write README file
-  const writeToFile = (fileName, data) => {
-    fs.writeFile(fileName, data, (err) => {
-      err ? console.log(err) : console.log(colors.brightBlue.bold("README file created successfully"));
-    });
-  };
-  
-// TODO: Create a function to initialize app
-function init() {}
+};
 
 // Function call to initialize app
 init();
