@@ -68,6 +68,13 @@ const questions = [
     name: "test",
     message: colors.green.bold("Please enter the test instructions for your project:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid test instructions for your project"),
+  },
+  {
+    type: "list",
+    name: "license",
+    message: colors.green.bold("Please select the license for your project:"),
+    choices: ["MIT", "Apache", "GPL", "None"],
+    default: "MIT",
   }
 
 ];

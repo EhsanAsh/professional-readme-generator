@@ -1,5 +1,10 @@
 // a function that returns a license badge based on which license is passed in
-
+const renderLicenseBadge = (license) => {
+  if (license !== "None") {
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return '';
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -17,20 +22,37 @@ function generateMarkdown(data) {
 ## Description
 > ${data.description}
 
+---
+
 ## installation
 ${data.installation}
+
+---
 
 ## Usage
 > ${data.usage}
 
-## Contributing
-${data.contributing}
+---
 
 ## Credits
 ${data.credits}
 
+---
+
+## License
+${renderLicenseBadge(data.license)}
+
+---
+
 ## Features
 ${data.features}
+
+---
+
+## Contributing
+${data.contributing}
+
+---
 
 ## Test
 ${data.test}
