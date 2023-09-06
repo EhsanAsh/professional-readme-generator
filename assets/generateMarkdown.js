@@ -1,7 +1,8 @@
 // a function that returns a license badge based on which license is passed in
 const renderLicenseBadge = (license) => {
   if (license !== "None") {
-    return `${renderLicenseLink} ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg) | [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})`;
+    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)
+    [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})`;
   }
   return '';
 };
@@ -18,7 +19,7 @@ const renderLicenseLink = (license) => {
 const renderLicenseSection = (license) => {
   if (license !== "None") {
     return `## License
-    This project is licensed under the ${license} license.`;
+This project is licensed under the ${license} license.`;
   }
   return '';
 };
@@ -29,6 +30,8 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 ${renderLicenseBadge(data.license)}
+
+${renderLicenseLink(data.license)}
 
 ## Description
 > ${data.description}
@@ -66,6 +69,11 @@ ${data.contributing}
 
 ## Test
 ${data.test}
+
+---
+
+## Questions
+Please visit my GitHub profile: [GitHub](${data.github})
 
 `;
 }

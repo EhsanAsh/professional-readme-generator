@@ -75,6 +75,12 @@ const questions = [
     message: colors.green.bold("Please select the license for your project:"),
     choices: ["MIT", "Apache", "GPL", "None"],
     default: "MIT",
+  },
+  {
+    type: "input",
+    name: "github",
+    message: colors.green.bold("Please enter your github username:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid github username"),
   }
 
 ];
