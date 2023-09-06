@@ -10,7 +10,7 @@ const renderLicenseBadge = (license) => {
 // Creating a function that returns the license link
 const renderLicenseLink = (license) => {
   if (license !== "None") {
-    return `* [License](#license)`;
+    return `[License](#license)`;
   }
   return '';
 };
@@ -40,6 +40,7 @@ ${renderLicenseLink(data.license)}
 
 ## Table of Contents
 
+* [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Credits](#credits)
@@ -51,7 +52,7 @@ ${renderLicenseLink(data.license)}
 
 ---
 
-## installation
+## Installation
 ${data.installation}
 
 ---
