@@ -38,6 +38,19 @@ ${renderLicenseLink(data.license)}
 
 ---
 
+## Table of Contents
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
+* [Features](#features)
+* [Contributing](#contributing)
+* [Test](#test)
+* [Questions](#questions)
+
+---
+
 ## installation
 ${data.installation}
 
