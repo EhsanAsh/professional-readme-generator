@@ -1,7 +1,8 @@
 // a function that returns a license badge based on which license is passed in
 const renderLicenseBadge = (license) => {
   if (license !== "None") {
-    return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg) | [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})`;
+    return `This project is licensed under the ${license} license.
+    ![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg) | [![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})`;
   }
   return '';
 };
