@@ -81,6 +81,12 @@ const questions = [
     name: "github",
     message: colors.green.bold("Please enter your github username:"),
     validate: (value) => value ? true : colors.red.bold("Please enter a valid github username"),
+  },
+  {
+    type: "input",
+    name: "email",
+    message: colors.green.bold("Please enter your email address:"),
+    validate: (value) => value ? true : colors.red.bold("Please enter a valid email address"),
   }
 
 ];
